@@ -10,6 +10,6 @@ COPY --from=build /opt/build/ipcount /opt/ipcount
 
 EXPOSE 8000
 
-CMD [ "/opt/ipcount", "/config.ini", "/ip.db" ]
+CMD [ "/opt/ipcount", "/config.ini", "/data/ip.db" ]
 
 

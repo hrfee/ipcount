@@ -23,5 +23,5 @@ run with `ipcount <path to config file> <path to db file>`.
 if using the included dockerfile,
 
 ```sh
-$ docker create --name ipcount --restart always -p 8000:8000 -v /path/to/config.ini:/config.ini:ro -v /path/to/ip.db:/ip.db ipcount
+$ docker create --name ipcount --restart always -p 8000:8000 -v /path/to/config.ini:/config.ini:ro -v /path/to/data:/data ipcount
 ```
