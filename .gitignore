@@ -1,2 +1,4 @@
 config.ini
 ip.db
+ipcount
+geoip/
