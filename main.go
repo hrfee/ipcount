@@ -77,10 +77,9 @@ func DecodeEntry(b []byte) (e *Entry) {
 	for i := 8; i < 16; i++ {
 		if b[i] != 0 {
 			e.CountryISOCode += string(b[i])
-			b[i] = 0
 		}
 	}
-	e.LastVisit = time.Unix(int64(binary.LittleEndian.Uint64(b)), 0)
+	e.LastVisit = time.Unix(int64(binary.LittleEndian.Uint64(b[:8])), 0)
 	return
 }
 
